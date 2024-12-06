@@ -27,9 +27,6 @@ export class ExpenseListComponent {
     this.expenseService.getExpenses().subscribe({
       next: (data) => {
         this.expenses = data;
-        if (this.expenses.length > 0) {
-          this.selectedExpense = this.expenses[0];
-        }
       },
       error: (err) => {
         console.error('Error loading expenses:', err);

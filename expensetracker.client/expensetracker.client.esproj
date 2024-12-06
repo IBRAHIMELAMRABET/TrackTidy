@@ -17,7 +17,6 @@
     <Folder Include="src\app\auth\" />
     <Folder Include="src\app\dashboard\" />
     <Folder Include="src\app\expense\" />
-    <Folder Include="src\app\category\" />
     <Folder Include="src\app\budget\" />
     <Folder Include="src\app\models\" />
     <Folder Include="src\app\charts\" />

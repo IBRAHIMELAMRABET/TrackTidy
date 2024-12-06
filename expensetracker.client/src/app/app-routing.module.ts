@@ -5,6 +5,7 @@ import { ExpenseListComponent } from './expense/expense-list/expense-list.compon
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { SharedLayoutComponent } from './shared/shared-layout.component';
+import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'expenses',
         component: ExpenseListComponent
+      },
+      {
+        path: 'categories',
+        component: CategoryComponent
       }
     ]
   }

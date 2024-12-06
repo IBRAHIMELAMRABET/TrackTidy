@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ChartsService } from '../charts.service';
 
 @Component({
@@ -7,34 +7,16 @@ import { ChartsService } from '../charts.service';
   styleUrls: ['./area-chart.component.css']
 })
 export class AreaChartComponent implements OnInit {
-  chartOptions: any;
+  areaChartOptions: any;
 
-  constructor(private chartsService: ChartsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.fetchChartData();
+    this.setupChart();
   }
 
-  fetchChartData(): void {
-    this.chartsService.getExpensesBudgets().subscribe((data) => {
-      this.setupChart(data);
-    });
-  }
-
-  setupChart(data:any): void {
-    this.chartOptions = {
-      series: [
-        {
-          name: "Expenses",
-          data: [1500, 1418, 1456, 1526, 1356, 1256],
-          color: "#1A56DB",
-        },
-        {
-          name: "Budgets",
-          data: [643, 413, 765, 412, 1423, 1731],
-          color: "#7E3BF2",
-        },
-      ],
+  setupChart(): void {
+    this.areaChartOptions = {
       chart: {
         height: "100%",
         maxWidth: "100%",
@@ -52,9 +34,6 @@ export class AreaChartComponent implements OnInit {
         x: {
           show: false,
         },
-      },
-      legend: {
-        show: false
       },
       fill: {
         type: "gradient",
@@ -80,8 +59,15 @@ export class AreaChartComponent implements OnInit {
           top: 0
         },
       },
+      series: [
+        {
+          name: "New users",
+          data: [6500, 6418, 6456, 6526, 6356, 6456],
+          color: "#1A56DB",
+        },
+      ],
       xaxis: {
-        categories: ["January", "February", "March", "April", "May", "June", "July"],
+        categories: ['01 February', '02 February', '03 February', '04 February', '05 February', '06 February', '07 February'],
         labels: {
           show: false,
         },

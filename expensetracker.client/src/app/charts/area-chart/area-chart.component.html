@@ -1,10 +1,16 @@
-<div *ngIf="chartOptions">
-  <apx-chart [series]="chartOptions.series"
-             [chart]="chartOptions.chart"
-             [labels]="chartOptions.labels"
-             [plotOptions]="chartOptions.plotOptions"
-             [legend]="chartOptions.legend"></apx-chart>
+<div *ngIf="areaChartOptions">
+  <apx-chart
+    [series]="areaChartOptions.series"
+    [chart]="areaChartOptions.chart"
+    [xaxis]="areaChartOptions.xaxis"
+    [dataLabels]="areaChartOptions.dataLabels"
+    [tooltip]="areaChartOptions.tooltip"
+    [stroke]="areaChartOptions.stroke"
+    [fill]="areaChartOptions.fill"
+    [yaxis]="areaChartOptions.yaxis"
+    [grid]="areaChartOptions.grid"
+  ></apx-chart>
 </div>
-<div *ngIf="!chartOptions">
+<div *ngIf="!areaChartOptions">
   <p>Loading chart data...</p>
 </div>

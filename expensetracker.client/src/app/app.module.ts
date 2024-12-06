@@ -26,11 +26,13 @@ import { DonutChartComponent } from './charts/donut-chart/donut-chart.component'
 import { RadialChartComponent } from './charts/radial-chart/radial-chart.component';
 import { AreaChartComponent } from './charts/area-chart/area-chart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { ProfileComponent } from './profile/profile.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [AppComponent, LoginComponent, RegisterComponent, NavbarComponent, SidebarComponent, ExpenseListComponent, SharedLayoutComponent, DashboardComponent, DonutChartComponent, RadialChartComponent, AreaChartComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, NavbarComponent, SidebarComponent, ExpenseListComponent, SharedLayoutComponent, DashboardComponent, DonutChartComponent, RadialChartComponent, AreaChartComponent, ProfileComponent, CategoryComponent],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, NgApexchartsModule, AppRoutingModule, FontAwesomeModule, DarkModeToggleComponent
   ],
