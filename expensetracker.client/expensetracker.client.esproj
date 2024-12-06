@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.271090-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\expensetracker.client\</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\auth\login\**" />
+    <None Remove="src\app\auth\register\**" />
+    <TypeScriptConfiguration Remove="src\app\auth\login\**" />
+    <TypeScriptConfiguration Remove="src\app\auth\register\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\auth\" />
+    <Folder Include="src\app\dashboard\" />
+    <Folder Include="src\app\expense\" />
+    <Folder Include="src\app\category\" />
+    <Folder Include="src\app\budget\" />
+    <Folder Include="src\app\models\" />
+    <Folder Include="src\app\charts\" />
+    <Folder Include="src\app\shared\" />
+    <Folder Include="src\environments\" />
+  </ItemGroup>
+</Project>

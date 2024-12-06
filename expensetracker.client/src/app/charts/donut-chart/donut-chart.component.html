@@ -1,0 +1,10 @@
+<div *ngIf="chartOptions">
+  <apx-chart [series]="chartOptions.series"
+             [chart]="chartOptions.chart"
+             [labels]="chartOptions.labels"
+             [plotOptions]="chartOptions.plotOptions"
+             [legend]="chartOptions.legend"></apx-chart>
+</div>
+<div *ngIf="!chartOptions">
+  <p>Loading chart data...</p>
+</div>
